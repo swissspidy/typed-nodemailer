@@ -3,8 +3,6 @@
 // Definitions by: Rogier Schouten <https://github.com/rogierschouten/>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-/// <reference path="./nodemailer-types.d.ts" />
-
 declare module "nodemailer" {
 
 	import directTransport = require("nodemailer-direct-transport");
@@ -38,6 +36,14 @@ declare module "nodemailer" {
 		 */
 		use(step: string, plugin: Plugin): void;
 
+		/**
+		 * Creates a template based sender function
+		 *
+		 * @param {Object} templates Object with string values where key is a message field and value is a template
+		 * @param {Object} defaults Optional default message fields
+		 * @return {Function} E-mail sender
+		 */
+		templateSender(templates: any, defaults: any): void;
 
 		/**
 		 * Close all connections
