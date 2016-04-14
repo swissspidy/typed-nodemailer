@@ -1,0 +1,29 @@
+{
+	"name":         "typed-nodemailer",
+	"version":      "2.3.2",
+	"description":  "Type definition for [nodemailer](https://github.com/nodemailer/nodemailer)",
+	"scripts":      {
+		"clean": "rm -rfv typings",
+		"build": "npm run clean && typings install && tsc",
+		"start": "npm run build"
+	},
+	"repository":   {
+		"type": "git",
+		"url":  "https://github.com/swissspidy/typed-nodemailer"
+	},
+	"keywords":     [
+		"TypeScript",
+		"swagger",
+		"middleware",
+		"swagger-tools"
+	],
+	"author":       "swissspidy",
+	"license":      "MIT",
+	"bugs":         {
+		"url": "https://github.com/swissspidy/typed-nodemailer/issues"
+	},
+	"homepage":     "https://github.com/swissspidy/typed-nodemailer",
+	"dependencies": {
+		"nodemailer": "^2.3.2"
+	}
+}

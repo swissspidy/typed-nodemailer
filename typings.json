@@ -1,0 +1,10 @@
+{
+	"name":                "nodemailer",
+	"author":              "swissspidy",
+	"main":                "nodemailer.d.ts",
+	"browser":             "nodemailer.d.ts",
+	"dependencies":        {},
+	"ambientDependencies": {
+		"node": "registry:dt/node#4.0.0+20160412142033"
+	}
+}
