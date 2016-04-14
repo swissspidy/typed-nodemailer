@@ -3,7 +3,7 @@
 // Definitions by: Rogier Schouten <https://github.com/rogierschouten/>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare module nodemailer {
+declare namespace nodemailer {
 
 	import directTransport = require("nodemailer-direct-transport");
 	import smtpTransport = require("nodemailer-smtp-transport");
