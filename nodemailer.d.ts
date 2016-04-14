@@ -3,15 +3,10 @@
 // Definitions by: Rogier Schouten <https://github.com/rogierschouten/>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
+import directTransport = require("nodemailer-direct-transport");
+import smtpTransport = require("nodemailer-smtp-transport");
+
 declare namespace nodemailer {
-
-	import directTransport = require("nodemailer-direct-transport");
-	import smtpTransport = require("nodemailer-smtp-transport");
-
-	export type Transport = nodemailer.Transport;
-	export type SendMailOptions = nodemailer.SendMailOptions;
-	export type SentMessageInfo = nodemailer.SentMessageInfo;
-
 	/**
 	 * Transporter plugin
 	 */
@@ -43,7 +38,7 @@ declare namespace nodemailer {
 		 * @param {Object} defaults Optional default message fields
 		 * @return {Function} E-mail sender
 		 */
-		templateSender(templates: any, defaults: any): (fields: any, context: any, callback?: (error: Error, info: SentMessageInfo) => void) => any|Promise;
+		templateSender(templates: any, defaults: any): (fields: any, context: any, callback?: (error: Error, info: SentMessageInfo) => void) => void;
 
 		/**
 		 * Close all connections
