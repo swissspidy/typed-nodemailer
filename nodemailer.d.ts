@@ -3,7 +3,7 @@
 // Definitions by: Rogier Schouten <https://github.com/rogierschouten/>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare module "nodemailer" {
+declare module nodemailer {
 
 	import directTransport = require("nodemailer-direct-transport");
 	import smtpTransport = require("nodemailer-smtp-transport");
@@ -64,3 +64,5 @@ declare module "nodemailer" {
 	 */
 	export function createTransport(transport: Transport, defaults?: Object): Transporter;
 }
+
+export = nodemailer
