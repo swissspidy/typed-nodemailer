@@ -32,7 +32,7 @@ declare namespace nodemailer {
 		 * Attach a plugin. 'compile' and 'stream' plugins can be attached with use(plugin) method
 		 *
 		 * @param step is a string, either 'compile' or 'stream' thatd defines when the plugin should be hooked
-		 * @param pluginFunc is a function that takes two arguments: the mail object and a callback function
+		 * @param plugin is a function that takes two arguments: the mail object and a callback function
 		 */
 		use(step: string, plugin: Plugin): void;
 
@@ -43,7 +43,7 @@ declare namespace nodemailer {
 		 * @param {Object} defaults Optional default message fields
 		 * @return {Function} E-mail sender
 		 */
-		templateSender(templates: any, defaults: any): void;
+		templateSender(templates: any, defaults: any): (fields: any, context: any, callback?: (error: Error, info: SentMessageInfo) => void) => any|Promise;
 
 		/**
 		 * Close all connections
